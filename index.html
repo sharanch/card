@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>glassy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap" rel="stylesheet">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Nunito Sans', sans-serif;
+            }
+
+            main{
+                min-height: 100vh;
+                background: linear-gradient(to right top,#69dfc9,#6cdbeb);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* background */
+
+            .glass{
+                background: white;
+                display: flex;
+                min-height: 80vh;
+                width: 60%;
+                background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+                border-radius: 2rem;
+                z-index: 3;
+                backdrop-filter: blur(0.3rem);
+            }
+
+                .circle1, .circle2, .circle3{
+                background: black;
+                height: 30vh;
+                width: 30vh;
+                border-radius: 50%;
+                background: linear-gradient(to right bottom, rgba(245, 127, 229, 1), rgba(224, 55, 55, 0.5));
+                /* z-index: -1; */
+                size: 40rem;
+                position: absolute;
+            }
+
+            .circle1{
+                top: 5%;
+                right: 15%;
+                z-index: 1;
+            }
+
+            .circle2{
+                bottom: 5%;
+                left: 15%;
+                z-index: 1;
+            }
+            .circle3{
+                height: 43vh;
+                width: 43vh;
+                bottom: 50%;
+                left: 50%;
+                top: 50%;
+                bottom: 50%;
+                z-index: 1;
+            }
+            /* end of background */
+
+            /* main sections sect1 is the left side block */
+
+            .sect1{
+                /* background: red; */
+                /* display: flex;
+                flex-direction: column;
+                justify-content: center; */
+                text-align: center;
+                color: #658ec6;
+                letter-spacing: 2px;
+                min-height: 100%;
+                width: 35%;
+                background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+                border-radius: 2rem 0rem 0rem 2rem;
+                padding-top: 5%;
+                padding-bottom: 5%;    
+            }
+
+            .links{
+                padding-top: 10%;
+                padding-bottom: 10%;
+                height: 70%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            a{
+                margin-left: auto;
+                margin-right: auto;
+                /* padding: 5% 5% 5% 5%; */
+                padding-left: 5%;
+                padding-right: 5%;
+                height: 30px;
+                width: max-content;
+                border-radius: 5px;
+                text-decoration: none;
+                border: 2px solid rgb(245, 127, 229);
+                letter-spacing: 1px;
+                color: rgb(245, 127, 229);
+                transition-duration: 1s;
+            }
+
+            .dp{
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+            }
+
+            a[href="https://www.fb.com/leavesharanalone"]:hover{
+                border: 2px solid #4267B2;
+                background: #4267B2;
+                color: white;
+                letter-spacing: 2px;
+                box-shadow: 5px 10px rgba(19, 19, 19, 0.3);
+            }
+
+            a[href="https://www.youtube.com"]:hover{
+                border: 2px solid #e72121;
+                background: #e72121;
+                color: white;
+                letter-spacing: 2px;
+                box-shadow: 5px 10px rgba(19, 19, 19, 0.3);
+            }
+
+            a[href="https://www.twitter.com/anybasis"]:hover{
+                border: 2px solid #1DA1F2;
+                background: #1DA1F2;
+                color: white;
+                letter-spacing: 2px;
+                box-shadow: 5px 10px rgba(19, 19, 19, 0.3);
+            }
+
+            a[href="https://www.ig.com/leavesharanalone"]:hover{
+                border: 2px solid  #E1306C;
+                background:  #E1306C;
+                color: white;
+                letter-spacing: 2px;
+                box-shadow: 5px 10px rgba(19, 19, 19, 0.3);
+            }
+
+            a[href="https://www.github.com/sharanch"]:hover{
+                border: 2px solid  #18191a;
+                background:  #18191a;
+                color: white;
+                letter-spacing: 2px;
+                box-shadow: 5px 10px rgba(19, 19, 19, 0.3);
+            }
+            /* end of left section */
+
+            /* right section with new stuff */
+
+            .sect2{
+                width: 65%;          
+                border-radius: 0rem 2rem 2rem 0rem;
+                padding-top: 10%;
+                padding-bottom: 10%;
+                padding-left: 10%;
+                padding-right: 10%;
+                color: #658ec6;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                background: linear-gradient(to right bottom, rgba(102, 245, 250, 0.7), rgba(224, 16, 162, 0.4));
+            }
+
+            #port{
+                /* padding-top: 5px; */
+                padding-bottom: 3%;
+            }
+            p{
+                padding-bottom: 3%;
+            }
+
+            .sect3{
+                display: flex;
+                justify-content: center;
+            }
+
+            img{
+                height: 108px;
+                width: 192px;
+                padding-right: 2%;
+            }
+
+            .email{
+                margin-top: 3%;
+                background: linear-gradient(to right bottom, rgba(245, 127, 229, 1), rgba(224, 55, 55, 0.5));
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-bottom: 2%;
+                padding-top: 2%;
+                color: #ECF0F1 ;
+                width: max-content;
+                border-radius: 15px;
+                opacity: 0.7;
+                transition-duration: 1s;
+            }
+
+            .email:hover{
+                opacity: 1;
+                letter-spacing: 2px;
+                box-shadow: 5px 10px rgba(19, 19, 19, 0.3);
+            }
+    
+        </style>
+    </head>
+
+<body>
+    <main>
+        <section class="glass">
+                <div class="sect1"> 
+                    <img src="/images/dp.jpg" alt="dp.jpg" class="dp">
+                    <h1>sharan chenna</h1>
+                    <div class="links">
+                        <a href="https://www.fb.com/leavesharanalone" target="none">facebook</a>
+                        <a href="https://www.ig.com/leavesharanalone" target="none">Instagram</a>
+                        <a href="https://www.twitter.com/anybasis" target="none">twitter</a>
+                        <a href="https://www.youtube.com" target="none">YouTube</a>
+                        <a href="https://www.github.com/sharanch" target="none">github</a>
+                    </div>
+                </div>
+
+                <div class="sect2">
+                    <h1 id="port">about</h1>
+                    <p>I'm a 2020 cs graduate, passionate about web-development & the zeal to learn new things</p>
+                    <p>I'm currently learning frontend, also interested in photography and storytelling</p>
+                    <ul>
+                        <li>web-design</li>
+                        <li>a football enthusiast</li>
+                        <li>I like to write short stories</li>
+                        <li>biking/travelling inspires me & gives me peace</li>
+                    </ul>
+
+                    <h1 class="port">reach me at:</h1>
+                    <h4 class="email">maguiret4@gmail.com</h4>
+                    <!-- <div class="sect3">
+                        <img src="F:\web\trails\monke.jpg" alt="">
+                        <img src="F:\web\trails\monke.jpg" alt="">
+                        <img src="F:\web\trails\monke.jpg" alt="">
+                        <img src="F:\web\trails\monke.jpg" alt="">
+                    </div> -->
+                </div>
+
+        </section>
+    </main>
+
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+</body>
+</html>
