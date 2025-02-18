@@ -172,6 +172,36 @@
             background-color: #f0f0f0;
             color: #333;
         }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            .skills ul, .projects ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .skills li, .projects li {
+                width: 100%;
+                text-align: center;
+            }
+            .project {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -209,6 +239,19 @@
             </ul>
         </div>
 
+        <div id="projects" class="projects">
+            <h3>Projects</h3>
+            <div class="project">
+                <h4>Automated Incident Response System</h4>
+                <p>Designed and implemented a system to automatically detect and resolve incidents using Python, PagerDuty, and AWS Lambda.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <h4>Kubernetes Cluster Deployment</h4>
+                <p>Deployed a highly available Kubernetes cluster on Oracle Cloud Infrastructure (OCI) using Terraform and Ansible.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
 
         <div id="contact" class="contact">
             <h3>Contact</h3>
