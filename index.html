@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Google Sans', Arial, sans-serif;
@@ -42,11 +42,15 @@
             font-size: 14px;
             transition: color 0.3s;
         }
+        .nav-links a:hover {
+            color: #10a37f;
+        }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 50px;
+            padding: 20px;
         }
         h2 {
             font-size: 32px;
@@ -75,6 +79,10 @@
             font-size: 24px;
             color: #10a37f;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+        .icons a:hover {
+            color: #0d8a6e;
         }
         .theme-toggle {
             cursor: pointer;
@@ -84,6 +92,62 @@
             color: #d1d5db;
             margin-left: 15px;
             transition: color 0.3s;
+        }
+        .skills, .projects, .contact {
+            margin-top: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        .skills ul, .projects ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .skills li, .projects li {
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+        .skills li:hover, .projects li:hover {
+            transform: scale(1.05);
+        }
+        .project {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: left;
+        }
+        .project h4 {
+            margin: 0;
+            color: #ffffff;
+        }
+        .project a {
+            color: #10a37f;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+        .contact ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact ul li {
+            margin: 10px 0;
+        }
+        .contact ul li a {
+            color: #10a37f;
+            text-decoration: none;
+        }
+        .contact ul li a:hover {
+            text-decoration: underline;
         }
         .light-mode {
             background-color: #ffffff;
@@ -104,29 +168,59 @@
         .light-mode p {
             color: #333;
         }
+        .light-mode .skills li, .light-mode .project {
+            background-color: #f0f0f0;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Sharan Chenna</h1>
         <nav class="nav-links">
-            <a href="#tags">Tags</a>
-            <a href="#archives">Archives</a>
-            <a href="#photos">Photos</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
             <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         </nav>
     </header>
     
     <div class="container">
         <h2>Hello World!</h2>
-        <p>I'm a CloudOps Engineer, passionate about DevOps, Linux, and automation.</p>
-        <p>You can find some of my work below</p>
+        <p>I'm a Cloud Engineer transitioning into a Site Reliability Engineer (SRE) role, passionate about building scalable, reliable, and efficient systems.</p>
+        <p>I specialize in cloud infrastructure, automation, observability, and incident management. Check out my work below!</p>
         <div class="icons">
-            <a href="#">&#x1F517; GitHub</a>
-            <a href="https://linkedin.com/in/sharanchenna">&#x1F517; LinkedIn</a>
+            <a href="https://github.com/sharan-chenna"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/sharan-chenna"><i class="fab fa-linkedin"></i></a>
+            <a href="https://stackoverflow.com/users/sharan-chenna"><i class="fab fa-stack-overflow"></i></a>
+        </div>
+
+        <div id="skills" class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>Cloud Platforms: Oracle Cloud (OCI), AWS, GCP</li>
+                <li>Infrastructure as Code (IaC): Terraform, CloudFormation</li>
+                <li>CI/CD: Jenkins, GitLab CI, GitHub Actions</li>
+                <li>Monitoring & Observability: Prometheus, Grafana, ELK Stack</li>
+                <li>Scripting & Automation: Python, Bash, Ansible</li>
+                <li>Containerization: Docker, Kubernetes</li>
+                <li>Incident Management: PagerDuty, Root Cause Analysis</li>
+            </ul>
+        </div>
+
+
+        <div id="contact" class="contact">
+            <h3>Contact</h3>
+            <p>Feel free to reach out to me for collaboration or opportunities!</p>
+            <ul>
+                <li>Email: sharan.chenna@example.com</li>
+                <li><a href="https://linkedin.com/in/sharan-chenna">LinkedIn</a></li>
+                <li><a href="https://github.com/sharan-chenna">GitHub</a></li>
+            </ul>
         </div>
     </div>
-    
+
     <script>
         function toggleTheme() {
             document.body.classList.toggle('light-mode');
